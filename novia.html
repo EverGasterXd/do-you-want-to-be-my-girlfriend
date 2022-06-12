@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>¿quieres ser mi novia?</title>  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#B91986" />
+    <meta property="og:title" content="quieres ser mi novia?">
+    <meta property="og:type" content="website">
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" 
+integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
+  </head>
+  <body class="container bg-primary text-white text-center py-5">
+
+      <h1 class="display-1 fw-bold">¿quieres ser mi novia? </h1>
+
+      <div class="mt-5">
+      <button class="btn btn-light btn-lg" onclick="siquiere(event)"">
+          si, acepto =D
+      </button>
+
+      <button class="btn btn-danger ms-2 btn-lg" onmouseenter="noquiere(event)">
+          no,ni soñando :(
+      </button>
+     </div>
+     <script>
+         function noquiere(evt) {
+             let target = evt.target;
+             let maxWidth = window.innerWidth;
+             let maxHeight = window.innerHeight;
+
+             let randomWidth = GetRandomint(0, maxWidth - target.offsetWidth);
+             let randomHeight = GetRandomint(0, maxHeight - target.offsetHeight);
+
+             target.style.position = 'absolute';
+             target.style.top = randomHeight + 'px';
+             target.style.left = randomWidth + 'px';
+         }
+          function GetRandomint(min, max) {
+              return Math.floor (Math.random() * (max - min)) + min;
+          }
+          function siquiere() {
+              alert("felicidades! tienes al mejor novi@ del mundo")
+          }
+     </script>
+        
+       </body>
+  </html>
